@@ -1,0 +1,29 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SnakeGameMobile.MainPage">
+    <Grid>
+        <!-- Рахунок -->
+        <Label x:Name="ScoreLabel"
+               Text="Score: 0"
+               FontSize="24"
+               HorizontalOptions="Center"
+               VerticalOptions="Start" />
+
+        <!-- Графічне поле -->
+        <GraphicsView x:Name="GameCanvas"
+                     
+                      HorizontalOptions="FillAndExpand"
+                      VerticalOptions="FillAndExpand" />
+
+        <!-- Кнопки -->
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center"
+                     VerticalOptions="End">
+            <Button Text="Start" Clicked="OnStartButtonClicked" />
+            <Button Text="↑" Clicked="OnUpButtonClicked" />
+            <Button Text="↓" Clicked="OnDownButtonClicked" />
+            <Button Text="←" Clicked="OnLeftButtonClicked" />
+            <Button Text="→" Clicked="OnRightButtonClicked" />
+        </StackLayout>
+    </Grid>
+</ContentPage>
